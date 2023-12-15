@@ -25,7 +25,7 @@
     //echo "Latitude:".$new_arr[0]['geoplugin_latitude']." and Longitude:".$new_arr[0]['geoplugin_longitude'];
     $lat = $new_arr[0]['geoplugin_latitude'];
     $lng = $new_arr[0]['geoplugin_longitude'];
-    $contetn = $lat . ";" . $lng . "\n";
+    $content = $lat . ";" . $lng . "\n";
 
     if($count == 0){
     file_put_contents($file, $content, FILE_APPEND);
