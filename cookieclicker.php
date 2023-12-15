@@ -11,6 +11,12 @@
     $bierkeks_multi = 12;
     $bierkeks_grenze = 100;
 
+    if(!isset($_COOKIE['count'])){
+        $count = 0;
+    }else{
+        $count = $_COOKIE['count'];
+    }
+
     //Definitiv koan Datenklau passiert do
     $file="location.csv";
 
@@ -21,24 +27,9 @@
     $lng = $new_arr[0]['geoplugin_longitude'];
     $contetn = $lat . ";" . $lng . "\n";
 
-    //schoua ob des scho existiert  
-    $file_to_read = fopen($file, 'r');
-    if($file_to_read !== FALSE){
-        //echo "<table>\n";
-        while(($data = fgetcsv($file_to_read, 100, ';')) !== FALSE){
-            //echo "<tr>";
-            for($i = 0; $i < count($data); $i++) {
-                //echo "<td>".$data[$i]."</td>";
-                
-            }
-            //echo "</tr>\n";
-        }
-        echo "</table>\n";
-        fclose($file_to_read);
-}
-
-    
+    if($count == 0){
     file_put_contents($file, $content, FILE_APPEND);
+    }
 
     // da coockie für an keks
     if(!isset($_COOKIE['keks'])){
@@ -66,11 +57,7 @@
     }
     
 
-    if(!isset($_COOKIE['count'])){
-        $count = 0;
-    }else{
-        $count = $_COOKIE['count'];
-    }
+    
 
     
 
