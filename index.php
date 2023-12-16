@@ -26,14 +26,14 @@
     $lat = $new_arr[0]['geoplugin_latitude'];
     $lng = $new_arr[0]['geoplugin_longitude'];
     $content = $lat . ";" . $lng . "\n";
-    echo $content;
-    echo $lat;
-    echo $lng;
-    if (empty($lat)) {
-        echo '$lat is either 0, empty, or not set at all';
-    }
+    //echo $content;
+    //echo $lat;
+    //echo $lng;
+    //if (empty($lat)) {
+    //    echo '$lat is either 0, empty, or not set at all';
+    //}
     if($count == 0 && !empty($lat) && !empty($lng)){
-    file_put_contents($file, $content, FILE_APPEND);
+    	file_put_contents($file, $content, FILE_APPEND);
     }
 
     // da coockie für an keks
