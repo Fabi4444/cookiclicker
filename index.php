@@ -121,7 +121,7 @@
     </head>
     <body>
         <h1>
-            Cookie Klicker von Fabi
+            Cookie Klicker
         </h1>
         Bitte akzeptiend cookies weil dia Sita macht viele cookies <br>
         <p class="counter">
