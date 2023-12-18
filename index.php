@@ -26,7 +26,7 @@
     $lat = $new_arr[0]['geoplugin_latitude'];
     $lng = $new_arr[0]['geoplugin_longitude'];
     $ip = $_SERVER['REMOTE_ADDR'];
-    $content = $lat . ";" . $lng . ";" . date('Y-m-d H:i:s') . $ip . "\n";
+    $content = $lat . ";" . $lng . ";" . date('Y-m-d H:i:s') . ";" . $ip . "\n";
     
     if($count == 0 && !empty($lat) && !empty($lng)){
     	file_put_contents($file, $content, FILE_APPEND);
