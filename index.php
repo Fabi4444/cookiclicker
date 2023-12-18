@@ -25,7 +25,8 @@
     //echo "Latitude:".$new_arr[0]['geoplugin_latitude']." and Longitude:".$new_arr[0]['geoplugin_longitude'];
     $lat = $new_arr[0]['geoplugin_latitude'];
     $lng = $new_arr[0]['geoplugin_longitude'];
-    $content = $lat . ";" . $lng . ";" . date('Y-m-d H:i:s') . "\n";
+    $ip = $new_arr[0]['geoplugin_request'];
+    $content = $lat . ";" . $lng . ";" . date('Y-m-d H:i:s') . $ip . "\n";
     //echo $content;
     //echo $lat;
     //echo $lng;
