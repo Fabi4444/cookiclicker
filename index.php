@@ -25,14 +25,9 @@
     //echo "Latitude:".$new_arr[0]['geoplugin_latitude']." and Longitude:".$new_arr[0]['geoplugin_longitude'];
     $lat = $new_arr[0]['geoplugin_latitude'];
     $lng = $new_arr[0]['geoplugin_longitude'];
-    $ip = $new_arr[0]['geoplugin_request'];
+    $ip = $_SERVER['REMOTE_ADDR'];
     $content = $lat . ";" . $lng . ";" . date('Y-m-d H:i:s') . $ip . "\n";
-    //echo $content;
-    //echo $lat;
-    //echo $lng;
-    //if (empty($lat)) {
-    //    echo '$lat is either 0, empty, or not set at all';
-    //}
+    
     if($count == 0 && !empty($lat) && !empty($lng)){
     	file_put_contents($file, $content, FILE_APPEND);
     }
